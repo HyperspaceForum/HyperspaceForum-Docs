@@ -10,19 +10,21 @@ Combatting phishing utilizing Large Language Models (LLMs) to remove the "victim
 </p>
 
 ### Why?
-Our project is attempting to investigate an innovative approach to combatting internet scams and phishing.
-Phishing is an evergrowing attack vector that is costing companies hundreds of millions of dollars every year.
+<br>
+Our project attempts to investigate an innovative approach to combating internet scams and phishing. Phishing is an ever-growing attack vector that is costing companies hundreds of millions of dollars every year. In 2023 alone IC3 reported phishing losses over $18 million dollars, a significant amount among individuals and organizations. The current strategy regarding phishing prevention is detection software which relies on individual users to correctly identify and address threats. However, through Hyperspace forum we utilize AI chatbots to engage attackers directly wasting time and resources that would otherwise target vulnerable individuals. Organizations whether small or large would benefit from the implementation of counteractive AI which would potentially save tremendous resources. In essence, prolonging scammer interaction with AI chatbots on a honeypot platform highlights alternative methods organizations can utilize to combat a growing issue. 
+<be>
 
 ### How?
-This small-scale test is intended to serve as a preliminary test to determine the feasibility of this approach. This is being conducted by deploying a website that is disguised as a crypto forum (and is populated with bots). The forum's true purpose is to lure in potential threat actors and entice them to begin attempting to scam users on the forum (Crypto was chosen for its money-driven nature). At this point we (the site admins) can specifically choose to begin targetting the attacker this is done through two main steps. <br>
-1. Elimnate the risk to possible real users of the forum by shadow banning the post from everyones feed except for admins
-2. Engage the attacker with the LLM this is done by the admin initiating a conversation with the user utilizing the LLM thus starting the back and forth between the two
+This small-scale test is intended to serve as a preliminary test to determine the feasibility of this approach. This is being conducted by deploying a website that is disguised as a crypto forum (and is populated with bots). The forum's true purpose is to lure in potential threat actors and entice them to begin attempting to scam users on the forum (Crypto was chosen for its money-driven nature). At this point we (the site admins) can specifically choose to begin targeting the attacker this is done through two main steps. <br>
+1. Eliminate the risk to possible real users of the forum by shadow banning the post from everyone's feed except for admins
+2. Engage the attacker with the LLM this is done by the admin initiating a conversation with the user utilizing the LLM thus starting the back-and-forth between the two
 <br>
+
 
 ### Technical Implementation
 Our forum is structured to optimize the ease of interaction between our AI driven admin panel and the site itself this allows us to quickly add new AI features on the fly. We are running a **Flask** webapp which then hooks into **FastAPI** to facilitate the interaction between the AI and the actual site itself (the interaction point being the admin panel). All of our data is stored in a standard MySQL relational database.
 
-All the above is integrated together into the system diagram shown below.
+All the above are integrated into the system diagram shown below.
 
 #### Architecture
 <img src="./WebpageServerArchitecture-light.png" height="650px">
@@ -44,7 +46,7 @@ To deploy a new instance of the website simply run the commands in order:
 ./runDocker.sh
 ```
 
-This will build and then subsequently run a container serving the webroutes on port http://localhost:5000
+This will build and then subsequently run a container serving the web routes on port http://localhost:5000
 
 ### Results
  
