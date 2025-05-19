@@ -31,7 +31,24 @@ All the above are integrated into the system diagram shown below.
 
 #### Challenges and Solutions
 
-INPUT CHALLENGES AND SOLUTIONS HERE
+Routing
+Over the course of development, we encountered significant infrastructure challenges and configuration issues that affected file path handling in both our docker container and Flask.
+
+Our first issue was with our Flask configuration. Specifically our template/ and static/ folders which led to a brief period of confusion when trying to pass relative paths for static files. This was resolved by reassessing our directory structure.
+
+Our second issue was with our infrastructure. Specifically a path inside our docker container. The core problem stemmed from a relative path which was not being interpreted appropriately in our container environment. The issue was resolved overall by using an absolute path instead of a relative path. This ensured consistent access to the database regardless of the container’s working directory 
+
+
+User Interaction Functionality
+On our frontend development, we ran into several issues with functionality in our user interface.
+
+First, we ran into significant layout inconsistencies which were caused by varying extensions that didn’t inherit properly from the base layout file. This caused a few formatting issues which led to lots of user functions not interacting correctly or displaying. This was resolved by standardizing the use of the base layout as an absolute extension.
+ 
+AWS Hosting
+Deploying our webpage was more frustrating than expected. We ran into some AWS issues that were preventing the page from displaying publicly, which required a series of permissions and configuration adjustments.
+AI Behavior
+We also ran into some issues with AI behavior. It required some refinement and focus while working on realistic engagement systems. The AI bots often drifted off-topic, making conversations feel less coherent. This was addressed by modifying their prompts to encourage more technical questioning, which improved dialogue relevance and helped maintain focus during user interactions.
+
 
 ### Getting Started
 #### Requirements
